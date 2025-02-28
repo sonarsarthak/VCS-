@@ -1,0 +1,57 @@
+1. Jira Filter Creation (JQL Filter for Open Issues Assigned to the Team)
+
+To track all open issues assigned to your team, follow these steps:
+Create the JQL Filter:
+
+    Navigate to Filters → View all filters → Create new filter.
+
+    Enter the following JQL query:
+
+    project = "Your Project Name" AND statusCategory != Done AND assignee in (user1, user2, user3)
+
+        Replace "Your Project Name" with the actual project name.
+        Add specific team members' usernames (or use assignee in membersOf("team-name") if using a group).
+
+    Click Search to verify the results.
+
+Save & Share the Filter:
+
+    Click Save As, name the filter (e.g., "Open Issues for Our Team").
+    Click Details → Edit Permissions.
+    Share the filter with the team by selecting "Group" or specific users.
+
+2. Jira Kanban Board Configuration
+
+To create and configure a Kanban board, follow these steps:
+Create a New Kanban Board:
+
+    Navigate to Jira Software → Boards → Create Board.
+    Choose Kanban Board → Create from an existing project or Create a new project.
+    Select the relevant project and click Create Board.
+
+Customize Columns in Kanban Board:
+
+    Go to Board Settings → Columns.
+    Modify columns to match your workflow (e.g., To Do, In Progress, In Review, Done).
+    Drag and drop statuses to the appropriate columns.
+
+Additional Configurations:
+
+    Enable WIP (Work in Progress) limits to optimize workflow.
+    Configure Swimlanes based on priority, assignee, or issue type.
+    Use Quick Filters to filter issues based on priority, assignee, or labels.
+
+3. Jira Issue Creation (Client-Reported Critical Issue)
+
+To create and assign a critical issue in Jira:
+
+    Click on Create in the top navigation bar.
+    Select the correct Project.
+    Choose Issue Type (e.g., Bug, Task).
+    Enter a Summary and Description detailing the issue.
+    Set Priority to "High" from the dropdown menu.
+    Assign the issue to the relevant developer.
+    Optionally, add Labels, Attachments, and Due Date.
+    Click Create to log the issue.
+
+The issue is now assigned, and the developer will be notified.
