@@ -1,0 +1,22 @@
+GIt App invoice app command to run 
+
+
+cd InvoiceApp          # Go into your project directory
+git init               # Initialize a new Git repository
+
+✅ 2. Create a Remote GitHub Repository
+Go to GitHub and create a new repository named InvoiceApp (don’t initialize with a README if your local project already has files).
+After creating, you’ll see a remote URL, something like:
+
+https://github.com/your-username/InvoiceApp.git
+
+✅ 3. Connect Local Repo to Remote
+
+git remote add origin https://github.com/your-username/InvoiceApp.git
+
+✅ 4. Add, Commit, and Push the Project
+git add .                              # Stage all files
+git commit -m "Initial commit"         # Commit with a message
+git branch -M main                     # Rename branch to 'main' (recommended)
+git push -u origin main                # Push to GitHub and set upstream
+
