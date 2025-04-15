@@ -1,22 +1,35 @@
-GIt App invoice app command to run 
+2. Prevent force pushes to main
 
+To prevent force pushes to the main branch, follow these steps:
 
-cd InvoiceApp          # Go into your project directory
-git init               # Initialize a new Git repository
+    Go to the "Settings" tab of your repository.
 
-✅ 2. Create a Remote GitHub Repository
-Go to GitHub and create a new repository named InvoiceApp (don’t initialize with a README if your local project already has files).
-After creating, you’ll see a remote URL, something like:
+    Under the "Branches" section in the left sidebar, click on "Branch protection rules".
 
-https://github.com/your-username/InvoiceApp.git
+    Click "Add rule".
 
-✅ 3. Connect Local Repo to Remote
+    In the "Branch name pattern" field, enter main (or whatever branch you want to protect).
 
-git remote add origin https://github.com/your-username/InvoiceApp.git
+    Under "Protect this branch", check the box for "Require linear history", which disables force pushes.
 
-✅ 4. Add, Commit, and Push the Project
-git add .                              # Stage all files
-git commit -m "Initial commit"         # Commit with a message
-git branch -M main                     # Rename branch to 'main' (recommended)
-git push -u origin main                # Push to GitHub and set upstream
+    Optionally, you can check additional protection settings like requiring pull request reviews, status checks, or even restricting who can push to this branch.
 
+    Click "Create" to save the protection rule.
+
+3. Set up required PR reviews
+
+To require pull request (PR) reviews before merging, follow these steps:
+
+    Go to the "Settings" tab of your repository.
+
+    Under "Branches" in the left sidebar, click on "Branch protection rules".
+
+    If you already have a protection rule for main, click on "Edit" next to the rule. Otherwise, click "Add rule" to create a new rule.
+
+    In the "Branch name pattern" field, enter main.
+
+    Scroll down to the "Require pull request reviews before merging" option and check the box.
+
+    Optionally, you can set the number of required approvals under "Require review from Code Owners" (if you have set up CODEOWNERS) or the "Required approving reviews" field.
+
+    Click "Save changes".
